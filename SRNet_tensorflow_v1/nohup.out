@@ -1,0 +1,55 @@
+WARNING:tensorflow:From /data/liuxulong/SRNet_database/code/SRNet/SRNet.py:112: calling reduce_mean (from tensorflow.python.ops.math_ops) with keep_dims is deprecated and will be removed in a future version.
+Instructions for updating:
+keep_dims is deprecated, use keepdims instead
+WARNING:tensorflow:From /data/liuxulong/SRNet_database/code/SRNet/utils_multistep_lr.py:42: softmax_cross_entropy_with_logits (from tensorflow.python.ops.nn_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+
+Future major versions of TensorFlow will allow gradients to flow
+into the labels input on backprop by default.
+
+See @{tf.nn.softmax_cross_entropy_with_logits_v2}.
+
+2021-11-10 20:55:56.852433: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2021-11-10 20:56:00.411449: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 0 with properties: 
+name: Tesla P100-PCIE-16GB major: 6 minor: 0 memoryClockRate(GHz): 1.3285
+pciBusID: 0000:85:00.0
+totalMemory: 15.89GiB freeMemory: 15.60GiB
+2021-11-10 20:56:00.411521: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
+2021-11-10 20:56:02.223457: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2021-11-10 20:56:02.223537: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
+2021-11-10 20:56:02.223552: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
+2021-11-10 20:56:02.224701: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15119 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:85:00.0, compute capability: 6.0)
+2021-11-10 20:56:52.498436: W tensorflow/core/kernels/queue_base.cc:277] _1_fifo_queue: Skipping cancelled enqueue attempt with queue not closed
+2021-11-10 20:56:52.498649: W tensorflow/core/kernels/queue_base.cc:277] _0_fifo_queue_1: Skipping cancelled enqueue attempt with queue not closed
+2021-11-10 20:56:52.498749: W tensorflow/core/kernels/queue_base.cc:277] _1_fifo_queue: Skipping cancelled enqueue attempt with queue not closed
+2021-11-10 20:56:52.498760: W tensorflow/core/kernels/queue_base.cc:277] _1_fifo_queue: Skipping cancelled enqueue attempt with queue not closed
+2021-11-10 20:56:52.498784: W tensorflow/core/kernels/queue_base.cc:277] _1_fifo_queue: Skipping cancelled enqueue attempt with queue not closed
+2021-11-10 20:56:52.498792: W tensorflow/core/kernels/queue_base.cc:277] _1_fifo_queue: Skipping cancelled enqueue attempt with queue not closed
+2021-11-10 20:56:52.498838: W tensorflow/core/kernels/queue_base.cc:277] _1_fifo_queue: Skipping cancelled enqueue attempt with queue not closed
+2021-11-10 20:56:52.498847: W tensorflow/core/kernels/queue_base.cc:277] _1_fifo_queue: Skipping cancelled enqueue attempt with queue not closed
+2021-11-10 20:56:52.498859: W tensorflow/core/kernels/queue_base.cc:277] _1_fifo_queue: Skipping cancelled enqueue attempt with queue not closed
+2021-11-10 20:56:52.498866: W tensorflow/core/kernels/queue_base.cc:277] _1_fifo_queue: Skipping cancelled enqueue attempt with queue not closed
+2021-11-10 20:56:52.498873: W tensorflow/core/kernels/queue_base.cc:277] _1_fifo_queue: Skipping cancelled enqueue attempt with queue not closed
+train_ds_size: 28000
+valid_ds_size: 2000
+initial accuracy on validation set: 0.5
+evaluation time on validation set: 10.753755569458008 seconds
+network will be evaluatd every 5000 iterations on validation set
+Traceback (most recent call last):
+  File "SRNet_example.py", line 62, in <module>
+    save_interval, LOG_DIR, num_runner_threads, load_path)
+  File "/data/liuxulong/SRNet_database/code/SRNet/utils_multistep_lr.py", line 128, in train
+    sess.run(train_op)
+  File "/home/liuxulong/anaconda3/envs/tensorflow3.6/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 877, in run
+    run_metadata_ptr)
+  File "/home/liuxulong/anaconda3/envs/tensorflow3.6/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 1100, in _run
+    feed_dict_tensor, options, run_metadata)
+  File "/home/liuxulong/anaconda3/envs/tensorflow3.6/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 1272, in _do_run
+    run_metadata)
+  File "/home/liuxulong/anaconda3/envs/tensorflow3.6/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 1278, in _do_call
+    return fn(*args)
+  File "/home/liuxulong/anaconda3/envs/tensorflow3.6/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 1263, in _run_fn
+    options, feed_dict, fetch_list, target_list, run_metadata)
+  File "/home/liuxulong/anaconda3/envs/tensorflow3.6/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 1350, in _call_tf_sessionrun
+    run_metadata)
+KeyboardInterrupt
